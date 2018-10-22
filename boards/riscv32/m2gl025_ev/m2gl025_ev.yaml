@@ -1,0 +1,11 @@
+identifier: m2gl025_ev
+name: Microsemi M2GL025 with engine-V target
+type: mcu
+arch: riscv32
+toolchain:
+  - zephyr
+ram: 32
+testing:
+  ignore_tags:
+    - net
+    - bluetooth

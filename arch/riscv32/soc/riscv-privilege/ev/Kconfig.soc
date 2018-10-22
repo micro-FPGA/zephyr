@@ -1,0 +1,14 @@
+# Kconfig - RISCV32_EV configuration options
+#
+# Copyright (c) 2018 MicroFPGA UG
+#
+
+choice
+prompt "MicroFPGA engine-V system implementation"
+depends on SOC_SERIES_RISCV32_EV
+
+config SOC_RISCV32_EV
+	bool "MicroFPGA engine-V system implementation"
+
+
+endchoice

@@ -1,0 +1,11 @@
+# Kconfig - RISCV32_EV implementation
+#
+# Copyright (c) 2018 MicroFPGA UG
+#
+
+config SOC_SERIES_RISCV32_EV
+	bool "MicroFPGA engine-V implementation"
+	depends on RISCV32
+	select SOC_FAMILY_RISCV_PRIVILEGE
+	help
+	Enable support for MicroFPGA engine-V

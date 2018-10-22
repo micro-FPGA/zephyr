@@ -1,0 +1,28 @@
+# Kconfig.ev - engine-V UART configuration option
+#
+# Copyright (c) 2018 MicroFPGA UG
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+menuconfig UART_EV
+	bool "engine-V UART driver"
+	depends on SOC_RISCV32_EV
+	select SERIAL_HAS_DRIVER
+	help
+          Enable the engine-V UART driver.
+
+menuconfig UART_EV_PORT_0
+	bool "Enable engine-V Port 0"
+	depends on UART_EV
+	help
+	  This tells the driver to configure the UART port at boot, depending on
+	  the additional configuration options below.
+
+config UART_EV_PORT_0_NAME
+	string "Port 0 Device Name"
+	default "uart0"
+	depends on UART_EV_PORT_0
+	help
+	  This is the device name for UART, and is included in the device
+	  struct.

@@ -1,0 +1,6 @@
+if BOARD_M2GL025_EV
+
+config BOARD
+	default "m2gl025_ev"
+
+endif
