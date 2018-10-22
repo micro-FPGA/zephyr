@@ -45,17 +45,12 @@ static const struct uart_device_config uart_ev_dev_cfg_0 = {
 	.regs = RISCV_EV_UART_BASE,
 };
 
-DEVICE_AND_API_INIT(uart_ev_0, "uart0",
-//DEVICE_AND_API_INIT(uart_ev_0, "CONFIG_UART_EV_PORT_0_NAME",
+
+DEVICE_AND_API_INIT(uart_ev_0, CONFIG_UART_EV_PORT_0_NAME,
 		    uart_ev_init, NULL,
 		    &uart_ev_dev_cfg_0,
 		    PRE_KERNEL_1, CONFIG_KERNEL_INIT_PRIORITY_DEVICE,
 		    (void *)&uart_ev_driver_api);
 
-//DEVICE_AND_API_INIT(uart_miv_0, CONFIG_UART_MIV_PORT_0_NAME,
-//		    uart_miv_init, &uart_miv_data_0, 
-//                  &uart_miv_dev_cfg_0,
-//		    PRE_KERNEL_1, CONFIG_KERNEL_INIT_PRIORITY_DEVICE,
-//		    (void *)&uart_miv_driver_api);
 
 
