@@ -3,14 +3,13 @@
 
 #include <soc_common.h>
 
-
 /* UART Configuration */
-#define RISCV_EV_UART_BASE           0x7E00
+#define RISCV_EV_UART_BASE           0xC000
 
 
 /* Timer configuration */
-#define RISCV_MTIME_BASE             0x7B00
-#define RISCV_MTIMECMP_BASE          0x7C00
+#define RISCV_MTIME_BASE             0xE000
+#define RISCV_MTIMECMP_BASE          0xD000
 
 /* lib-c hooks required RAM defined variables */
 #define RISCV_RAM_BASE               CONFIG_RISCV_RAM_BASE_ADDR
