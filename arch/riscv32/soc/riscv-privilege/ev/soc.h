@@ -9,7 +9,7 @@
 
 /* Timer configuration */
 #define RISCV_MTIME_BASE             0xE000
-#define RISCV_MTIMECMP_BASE          0xD000
+#define RISCV_MTIMECMP_BASE          0xE004
 
 /* lib-c hooks required RAM defined variables */
 #define RISCV_RAM_BASE               CONFIG_RISCV_RAM_BASE_ADDR
